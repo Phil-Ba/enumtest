@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: postgres
+  enumtest:
+    image: at.bayava/enumtest
+    depends_on:
+      - postgres
